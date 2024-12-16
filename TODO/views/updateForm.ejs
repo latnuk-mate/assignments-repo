@@ -1,0 +1,21 @@
+<form action="/task/edit/<%= task.id %>?_method=PUT" method="post">
+    <div class="form--field">
+        <select name="status" value="<%=task.status%>">
+            <option value="pending">Pending</option>
+            <option value="in-progress">In-Progress</option>
+            <option value="completed">Completed</option>
+        </select>
+    </div>
+    <div class="form--field">
+        <input 
+            type="text"
+            placeholder="Title..."
+            name="task"
+            value="<%=task.title%>"
+            disabled
+        />
+    </div>
+    <button type="submit" class="task--create--btn">
+        Update Task
+    </button>
+</form>
